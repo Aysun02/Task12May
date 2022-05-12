@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://dotnetfiddle.net/Account/MyFiddles -->
+<html style="font-size: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!--[if IE]><link rel="shortcut icon" href="/favicon.ico"><![endif]-->
+		<meta name="msapplication-TileImage" content="/content/images/logo.png">
+		<link rel="icon" href="https://dotnetfiddle.net/content/images/icon_24.png">
+		
+		<title>C# Online Compiler | .NET Fiddle</title>
+		
+	<link href="./Task12May_files/font-awesome.min.css" rel="stylesheet">
+	
+
+		<meta name="keywords" content=".NET, DotNet, C#, VB.NET, F#, CSharp, VbNet, FSharp, SandBox, Visual Studio, Fiddle, Code Snippet">
+		<meta name="description" content="Test your C# code online with .NET Fiddle code editor.">
+		<meta name="viewport" content="width=device-width,maximum-scale=1,initial-scale=1,user-scalable=0">
+		
+	<link href="./Task12May_files/bootstrap.min.css" rel="stylesheet">
+
+	<link href="./Task12May_files/desktop" rel="stylesheet">
+
+
+	<style type="text/css">
+		.ui-menu {
+			display: inline-block;
+			position: absolute;
+			top: 360px;
+			left: 15px;
+			max-width: 350px;
+			z-index: 1000;
+		}
+
+		.tab-content {
+			padding-top: 40px;
+		}
+
+		.container {
+			padding-top: 15px;
+		}
+
+		.vcenter {
+			display: inline-block;
+			vertical-align: middle;
+			float: none;
+			margin-right: -4px;
+		}
+
+		.vtop {
+			display: inline-block;
+			vertical-align: top;
+			/*margin-top: 20px;*/
+			float: none;
+			margin-right: -4px;
+		}
+
+        #login-modal .modal-body > a {
+            font-size: 17px;
+            color: #333;
+            width: 100%;
+            display: block;
+            text-align: center;
+            border: 1px solid #efefef;
+            border-radius: 10px;
+            padding: 5px;
+            background: #f7f7f7;
+            margin-bottom: 5px
+        }
+		
+        #login-modal .modal-body > a:hover {
+            color: #0077CF;
+            transition: .3s
+        }
+
+        .welly {
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            border: 1px solid #efefef;
+            margin-top: 5px;
+            padding: 9px
+        }
+
+        .access-type-container button {
+            text-align: left;
+        }
+        .share-link {
+            margin-top: 6px;
+            margin-bottom: 10px;
+        }
+        .share-widget-output {
+            margin-top: 6px;
+        }
+
+		.brand-logo {
+			margin: 0;
+			margin-top: 1px;
+		}
+
+	</style>
+	
+	
+	<style>
+		table.dataTable tr.odd td.sorting_1 {
+			background-color: #F1F1F1;
+		}
+
+		table.dataTable tr.even td.sorting_1 {
+			background-color: #FAFAFA;
+		}
+
+		.counters .counter {
+			display: inline-block;
+			margin-right: 10px;
+		}
+
+		.counters .counter:last-child {
+			margin-right: 0;
+		}
+
+		.small {
+			font-size: 12px;
+		}
+
+		#fiddles_processing {
+			display: none;
+		}
+
+		table > tfoot tr:last-child > td {
+			border-top: 1px solid #333;
+		}
+	</style>
+
+	
+
+
+	</head>
+<body>
+	<div class="container">
+		
+
+
+
+
+
+<div class="navbar navbar-default navbar-fixed-top" id="top-navbar">
+	<div class="navbar-left-container hidden-xs hidden-sm hidden-md">
+		<h1 class="brand-logo"><a href="https://dotnetfiddle.net/" class="logo navbar-brand"><img src="./Task12May_files/logo.png" alt=".NET Fiddle"></a></h1>
+	</div>
+	<div class="navbar-center-container">
+				<div class="btn-group navbar-btn">
+					<a class="btn btn-default" href="https://dotnetfiddle.net/">
+						<span class="glyphicon glyphicon-chevron-left"></span> Back To Editor
+					</a>
+				</div>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="btn-group navbar-btn">
+	<a class="btn btn-default active" href="https://dotnetfiddle.net/Account/MyFiddles">
+		My Fiddles
+	</a>
+	<a class="btn btn-default " href="https://dotnetfiddle.net/Account/Favorites">
+		Favorites
+	</a>
+</div>
+
+	</div>
+	<div class="navbar-right-container navbar-right">
+		<div class="btn-group navbar-btn user-info">
+				<div class="dropdown">
+					<a class="user-name dropdown-toggle" data-toggle="dropdown">			
+						<span id="account-display-name">AysunH</span> <span class="caret"></span><br>
+					</a>
+					<ul class="dropdown-menu academy-dropdown-menu" role="menu">
+							<li><a href="https://dotnetfiddle.net/Account/MyFiddles">My Fiddles</a></li>
+							<li><a href="https://dotnetfiddle.net/Account/Favorites">Favorites</a></li>
+						<li><a href="https://dotnetfiddle.net/Account/Settings">Account</a></li>
+						<li><a href="https://dotnetfiddle.net/Account/Logout">Log out</a></li>
+					</ul>
+
+				</div>
+	<span class="navbar-email">aysunvh@code.edu.az</span>
+				<span style="display: none;">
+					
+				</span>
+		</div>
+		<span class="navbar-name-separator">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<div class="btn-group navbar-btn">
+			
+				<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-align-justify"></span>
+				</button>
+			<ul class="dropdown-menu academy-dropdown-menu">
+
+					<li><a href="https://dotnetfiddle.net/about" id="about-btn" data-href="/Home/GetAboutCode">About</a></li>
+					<li><a href="https://twitter.com/dotnetfiddle" id="twitter-btn" target="_blank">Twitter</a></li>
+					<li><a href="https://dotnetcademy.net/" id="academy-btn" target="_blank">.NET Academy</a></li>
+					<li><a href="https://chrome.google.com/webstore/detail/net-fiddle/ohjcieidjalbkdciooknjhkfemfajpjc" id="chrome-ext-btn" target="_blank">Chrome Ext</a></li>
+					<li><a href="https://dotnetfiddle.uservoice.com/" id="user-voice-btn" target="_blank">User Voice</a></li>
+					<li><a href="javascript:void(0);" id="support-btn" onclick=" showClassicWidget() ">Support</a></li>
+					<li><a href="https://dotnetfiddle.net/Roadmap">Roadmap</a></li>
+					<li><a href="https://dotnetfiddle.net/Terms">Terms</a></li>
+					<li><a href="https://dotnetfiddle.net/PrivacyPolicy">Privacy Policy</a></li>
+					<li><a href="https://dotnetfiddle.net/contact">Contact Us</a></li>
+
+			</ul>
+			
+		</div>
+	</div>
+</div>
+<div class="main docked">
+	<div class="container">
+    
+		
+
+
+
+
+<!-- Tab panes -->
+<div class="tab-content">
+		<div id="fiddles_wrapper" class="dataTables_wrapper" role="grid"><div id="fiddles_processing" class="dataTables_processing" style="visibility: hidden;">Processing...</div><table class="table table-striped small dataTable" id="fiddles" aria-describedby="fiddles_info">
+			<thead>
+				<tr role="row"><th class="sorting" role="columnheader" tabindex="0" aria-controls="fiddles" rowspan="1" colspan="1" aria-label="Id: activate to sort column ascending" style="width: 50px;">Id</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="fiddles" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 250px;">Name</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="fiddles" rowspan="1" colspan="1" aria-label="Language: activate to sort column ascending" style="width: 50px;">Language</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="fiddles" rowspan="1" colspan="1" aria-label="Project Type: activate to sort column ascending" style="width: 110px;">Project Type</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="fiddles" rowspan="1" colspan="1" aria-label="Compiler: activate to sort column ascending" style="width: 110px;">Compiler</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="fiddles" rowspan="1" colspan="1" aria-label="Access Type: activate to sort column ascending" style="width: 110px;">Access Type</th><th class="sorting_desc" role="columnheader" tabindex="0" aria-controls="fiddles" rowspan="1" colspan="1" aria-label="Created: activate to sort column ascending" style="width: 170px;">Created</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="fiddles" rowspan="1" colspan="1" aria-label="Last Modified: activate to sort column ascending" style="width: 170px;">Last Modified</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="fiddles" rowspan="1" colspan="1" aria-label="Forked: activate to sort column ascending" style="width: 50px;">Forked</th><th class="sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="&amp;nbsp;" style="width: 50px;">&nbsp;</th></tr>
+			</thead>
+			
+			<tfoot>
+				<tr><td rowspan="1" colspan="1"></td><td rowspan="1" colspan="1"></td><td rowspan="1" colspan="1"></td><td rowspan="1" colspan="1"></td><td rowspan="1" colspan="1"></td><td rowspan="1" colspan="1"></td><td rowspan="1" colspan="1"></td><td rowspan="1" colspan="1"></td><td rowspan="1" colspan="1"></td><td rowspan="1" colspan="1"></td></tr>
+			</tfoot>
+		<tbody role="alert" aria-live="polite" aria-relevant="all"><tr class="odd"><td class=""><a href="https://dotnetfiddle.net/NoOSr6">NoOSr6</a></td><td class="">C# introduction: Task 1</td><td class="">C#</td><td class="">Console</td><td class="">.NET 4.7.2</td><td class="">Only With Link</td><td class=" sorting_1">May 12, 2022 1:14 pm</td><td class="">May 12, 2022 1:14 pm</td><td class=""><a href="https://dotnetfiddle.net/null"></a></td><td class=""><a href="https://dotnetfiddle.net/NoOSr6" title="Edit"><i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;<a href="https://dotnetfiddle.net/Account/MyFiddles#" data-fiddle-id="NoOSr6" title="Delete" onclick="confirmDelete(this);return false;"><i class="glyphicon glyphicon-trash"></i></a></td></tr><tr class="even"><td class=""><a href="https://dotnetfiddle.net/jaJqLq">jaJqLq</a></td><td class="">Foreach</td><td class="">C#</td><td class="">Console</td><td class="">.NET 4.7.2</td><td class="">Only With Link</td><td class=" sorting_1">May 11, 2022 6:40 pm</td><td class="">May 11, 2022 6:40 pm</td><td class=""><a href="https://dotnetfiddle.net/null"></a></td><td class=""><a href="https://dotnetfiddle.net/jaJqLq" title="Edit"><i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;<a href="https://dotnetfiddle.net/Account/MyFiddles#" data-fiddle-id="jaJqLq" title="Delete" onclick="confirmDelete(this);return false;"><i class="glyphicon glyphicon-trash"></i></a></td></tr><tr class="odd"><td class=""><a href="https://dotnetfiddle.net/hHjZPi">hHjZPi</a></td><td class="">Arrays:Task5.</td><td class="">C#</td><td class="">Console</td><td class="">.NET 4.7.2</td><td class="">Public</td><td class=" sorting_1">May 9, 2022 4:02 pm</td><td class="">May 9, 2022 4:02 pm</td><td class=""><a href="https://dotnetfiddle.net/null"></a></td><td class=""><a href="https://dotnetfiddle.net/hHjZPi" title="Edit"><i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;<a href="https://dotnetfiddle.net/Account/MyFiddles#" data-fiddle-id="hHjZPi" title="Delete" onclick="confirmDelete(this);return false;"><i class="glyphicon glyphicon-trash"></i></a></td></tr><tr class="even"><td class=""><a href="https://dotnetfiddle.net/HquFWV">HquFWV</a></td><td class="">Array: Task 3.</td><td class="">C#</td><td class="">Console</td><td class="">.NET 4.7.2</td><td class="">Public</td><td class=" sorting_1">May 8, 2022 2:57 pm</td><td class="">May 8, 2022 2:57 pm</td><td class=""><a href="https://dotnetfiddle.net/null"></a></td><td class=""><a href="https://dotnetfiddle.net/HquFWV" title="Edit"><i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;<a href="https://dotnetfiddle.net/Account/MyFiddles#" data-fiddle-id="HquFWV" title="Delete" onclick="confirmDelete(this);return false;"><i class="glyphicon glyphicon-trash"></i></a></td></tr><tr class="odd"><td class=""><a href="https://dotnetfiddle.net/w2zqcX">w2zqcX</a></td><td class="">Arrays: Task2.</td><td class="">C#</td><td class="">Console</td><td class="">.NET 4.7.2</td><td class="">Public</td><td class=" sorting_1">May 8, 2022 2:47 pm</td><td class="">May 8, 2022 2:47 pm</td><td class=""><a href="https://dotnetfiddle.net/null"></a></td><td class=""><a href="https://dotnetfiddle.net/w2zqcX" title="Edit"><i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;<a href="https://dotnetfiddle.net/Account/MyFiddles#" data-fiddle-id="w2zqcX" title="Delete" onclick="confirmDelete(this);return false;"><i class="glyphicon glyphicon-trash"></i></a></td></tr><tr class="even"><td class=""><a href="https://dotnetfiddle.net/Vm4ahz">Vm4ahz</a></td><td class="">Arrays: Task 4.</td><td class="">C#</td><td class="">Console</td><td class="">.NET 4.7.2</td><td class="">Public</td><td class=" sorting_1">May 8, 2022 1:17 pm</td><td class="">May 8, 2022 1:17 pm</td><td class=""><a href="https://dotnetfiddle.net/null"></a></td><td class=""><a href="https://dotnetfiddle.net/Vm4ahz" title="Edit"><i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;<a href="https://dotnetfiddle.net/Account/MyFiddles#" data-fiddle-id="Vm4ahz" title="Delete" onclick="confirmDelete(this);return false;"><i class="glyphicon glyphicon-trash"></i></a></td></tr><tr class="odd"><td class=""><a href="https://dotnetfiddle.net/IdlqoV">IdlqoV</a></td><td class="">Arrays: Task 7.</td><td class="">C#</td><td class="">Console</td><td class="">.NET 4.7.2</td><td class="">Public</td><td class=" sorting_1">May 8, 2022 1:03 pm</td><td class="">May 8, 2022 1:03 pm</td><td class=""><a href="https://dotnetfiddle.net/null"></a></td><td class=""><a href="https://dotnetfiddle.net/IdlqoV" title="Edit"><i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;<a href="https://dotnetfiddle.net/Account/MyFiddles#" data-fiddle-id="IdlqoV" title="Delete" onclick="confirmDelete(this);return false;"><i class="glyphicon glyphicon-trash"></i></a></td></tr><tr class="even"><td class=""><a href="https://dotnetfiddle.net/IedoOG">IedoOG</a></td><td class="">Arrays: Task 6.</td><td class="">C#</td><td class="">Console</td><td class="">.NET 4.7.2</td><td class="">Only With Link</td><td class=" sorting_1">May 8, 2022 1:00 pm</td><td class="">May 8, 2022 1:02 pm</td><td class=""><a href="https://dotnetfiddle.net/null"></a></td><td class=""><a href="https://dotnetfiddle.net/IedoOG" title="Edit"><i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;<a href="https://dotnetfiddle.net/Account/MyFiddles#" data-fiddle-id="IedoOG" title="Delete" onclick="confirmDelete(this);return false;"><i class="glyphicon glyphicon-trash"></i></a></td></tr><tr class="odd"><td class=""><a href="https://dotnetfiddle.net/AQQ5sv">AQQ5sv</a></td><td class="">Arrays: Task1.</td><td class="">C#</td><td class="">Console</td><td class="">.NET 4.7.2</td><td class="">Public</td><td class=" sorting_1">May 8, 2022 11:36 am</td><td class="">May 8, 2022 11:36 am</td><td class=""><a href="https://dotnetfiddle.net/null"></a></td><td class=""><a href="https://dotnetfiddle.net/AQQ5sv" title="Edit"><i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;<a href="https://dotnetfiddle.net/Account/MyFiddles#" data-fiddle-id="AQQ5sv" title="Delete" onclick="confirmDelete(this);return false;"><i class="glyphicon glyphicon-trash"></i></a></td></tr><tr class="even"><td class=""><a href="https://dotnetfiddle.net/2Pzgt6">2Pzgt6</a></td><td class="">Task 3</td><td class="">C#</td><td class="">Console</td><td class="">.NET 4.7.2</td><td class="">Public</td><td class=" sorting_1">May 5, 2022 3:34 pm</td><td class="">May 5, 2022 3:34 pm</td><td class=""><a href="https://dotnetfiddle.net/null"></a></td><td class=""><a href="https://dotnetfiddle.net/2Pzgt6" title="Edit"><i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;<a href="https://dotnetfiddle.net/Account/MyFiddles#" data-fiddle-id="2Pzgt6" title="Delete" onclick="confirmDelete(this);return false;"><i class="glyphicon glyphicon-trash"></i></a></td></tr></tbody></table><div class="dataTables_info" id="fiddles_info">Showing 1 to 10 of 13</div><div class="dataTables_paginate paging_bootstrap" style="visibility: visible;"><ul class="pagination"><li class="prev disabled"><a href="https://dotnetfiddle.net/Account/MyFiddles#">← Previous</a></li><li class="active"><a href="https://dotnetfiddle.net/Account/MyFiddles#">1</a></li><li><a href="https://dotnetfiddle.net/Account/MyFiddles#">2</a></li><li class="next"><a href="https://dotnetfiddle.net/Account/MyFiddles#">Next → </a></li></ul></div></div>
+</div>
+
+
+
+	</div>
+</div>
+
+
+
+	</div>
+
+	<script type="text/javascript" async="" src="./Task12May_files/zRSaFn7aHgIFLfnHWxw5EA.js.download"></script><script async="" src="./Task12May_files/analytics.js.download"></script><script>
+		if (!window.location.origin) {
+			window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
+		}
+		function copyToClipboard(element) {
+			var $temp = $("<input>");
+			$("body").append($temp);
+			$temp.val($(element).val()).select();
+			document.execCommand("copy");
+			$temp.remove();
+		}
+	</script>
+	<script src="./Task12May_files/jquery"></script>
+
+	<script src="./Task12May_files/jqueryval"></script>
+
+
+	
+    <script src="./Task12May_files/utils"></script>
+
+	
+	<script src="./Task12May_files/datatables"></script>
+
+	<script type="text/javascript">
+
+		hideEmptyGridPager = function(grid) {
+			var wrapper = grid.parent();
+			var rowsPerPage = grid.fnSettings()._iDisplayLength;
+			var rowsToShow = grid.fnSettings().fnRecordsDisplay();
+			var minRowsPerPage = grid.fnSettings().aLengthMenu[0][0];
+
+			if (rowsToShow <= rowsPerPage || rowsPerPage == -1) {
+				$('.dataTables_paginate', wrapper).css('visibility', 'hidden');
+			} else {
+				$('.dataTables_paginate', wrapper).css('visibility', 'visible');
+			}
+			if (rowsToShow <= minRowsPerPage) {
+				$('.dataTables_length', wrapper).css('visibility', 'hidden');
+			} else {
+				$('.dataTables_length', wrapper).css('visibility', 'visible');
+			}
+		};
+		
+		function formatJSONdate(JSONDate)
+		{
+			var m = moment(new Date(JSONDate));
+			return m.format("MMM D, YYYY h:mm a");
+		}
+
+		$(document).ready(function() {
+
+			$("#fiddles").dataTable({
+				"bProcessing": true,
+				"bLengthChange": false,
+				"bServerSide": true,
+				"bFilter": false,
+				//"iDeferLoading": parseInt('13'),
+				"sAjaxSource": '/Account/MyFiddles_GetData',
+				//"iDisplayLength": parseInt('10'),
+				"aaSorting": [[6, "desc"]],
+				"aoColumns": [
+					{ "mData": "Id", "sWidth": "50px" },
+					{ "mData": "Name", "sWidth": "250px" },
+					{ "mData": "Language", "sWidth": "50px" },
+					{ "mData": "ProjectType", "sWidth": "110px" },
+					{ "mData": "Compiler", "sWidth": "110px" },
+					{ "mData": "AccessType", "sWidth": "110px" },
+					{ "mData": "CreatedAt", "sWidth": "170px" },
+					{ "mData": "LastUpdatedAt", "sWidth": "170px" },
+					{ "mData": "ParentFiddleId", "sWidth": "50px" },
+					// { "mData": "Statistic", "sWidth": "150px", "bSortable":false },
+					{ "mData": "Id", "bSortable": false, "sWidth": "50px" }
+				],
+				"aoColumnDefs": [
+					{
+						"mRender": function(data, type, row) {
+							var actions = $("<span>")
+								.append($("<a/>").attr("href", "/" + data)
+							.attr("title","Edit")
+									.append('<i class="glyphicon glyphicon-pencil"></i>'))
+							.append("&nbsp;&nbsp;")
+								.append($("<a/>").attr("href", "#").attr("data-fiddle-id", data)
+									.append('<i class="glyphicon glyphicon-trash"></i>')
+							.attr("title", "Delete")
+									.attr("onclick", "confirmDelete(this);return false;"));
+							return actions.html();
+						},
+						"aTargets": [9]
+					},
+					{
+						"mRender": function(data, type, row) {
+							var actions = $("<span>").append($("<a/>").attr("href", "/" + data).append(data));
+
+							return actions.html();
+						},
+						"aTargets": [0, 8]
+					},
+					/*{
+						"mRender": function(data, type, row) {
+
+
+							return '<div class="counters">' +
+								'<div class="counter"><i class="glyphicon glyphicon-star" title="Favorites"></i>&nbsp;' + data.Favorites + '</div>' +
+								'<div class="counter"><i class="glyphicon glyphicon-random" title="Forks"></i>&nbsp;' + data.Forks + '</div>' +
+								'<div class="counter"><i class="glyphicon glyphicon-eye-open" title="Unique Views"></i>&nbsp;' + data.Views + '</div>' +
+								'</div>';
+						},
+						"aTargets": [8]
+					},*/
+					{
+						"mRender": function (data, type, row) {
+							return formatJSONdate(data);
+						},
+						"aTargets": [6, 7]
+					}],
+				"bAutoWidth": false,
+				"fnDrawCallback": function() {
+					hideEmptyGridPager(this);
+				},
+				"sPaginationType": "bootstrap",
+				"oLanguage": {
+					"sInfo": "Showing _START_ to _END_ of _TOTAL_"
+				}
+			});
+
+			$("body").on("click", "ul.pagination a", function() {
+				$('.dataTables_paginate').css('visibility', 'visible');
+			});
+		});
+
+		var confirmDelete = function(a) {
+			var id = $(a).data("fiddleId");
+			if (tryConfirmDelete()) {
+				window.location.href = window.location.origin + "/Account/DeleteFiddle/?id=" + id;
+			}
+			return false;
+		};
+		
+		var tryConfirmDelete = function() {
+			return confirm("Are you sure you want to delete this fiddle?");
+		};
+	</script>
+
+	<script src="./Task12May_files/bootstrap.js.download"></script>
+
+
+
+		<script>
+			(function (i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function () {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+			ga('create', 'UA-45542977-1', 'dotnetfiddle.net');
+			ga('send', 'pageview');
+		</script>
+
+		<!-- UserVoice JavaScript SDK (only needed once on a page) -->
+		<script>(function () { var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true; uv.src = '//widget.uservoice.com/zRSaFn7aHgIFLfnHWxw5EA.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s) })()</script>
+		<!-- A function to launch the Classic Widget -->
+		<script>
+			UserVoice = window.UserVoice || [];
+			function showClassicWidget() {
+				UserVoice.push(['showLightbox', 'classic_widget', {
+					mode: 'support',
+					primary_color: '#cc6d00',
+					link_color: '#007dbf'
+				}]);
+			}
+		</script>
+
+	
+	<style id="profiler-minimizer-css">
+		.profiler-results {
+			display: none;
+		}
+	</style>
+	<script type="text/javascript" id="profiler-minimizer">
+		$(document).ready(function () {
+			 var e = function () {
+			 	var e = $(".profiler-results");
+			 	if (e.length == 0) return false;
+			 	e.addClass("profiler-min");
+				 return true;
+			 };
+			
+			var t = function () {
+				var n = e();
+				if (n) {
+					$("#profiler-minimizer").remove(); $("#profiler-minimizer-css").remove();
+					return;
+				}
+				setTimeout(t, 50);
+			};
+			t();
+		})
+	</script>
+	
+	<script>
+		// script to dramatically reduce bounce rate
+		setTimeout(gaIsActive, 20000);
+		setTimeout(gaIsActive, 60000);
+		setTimeout(gaIsActive, 90000);
+		setTimeout(gaIsActive, 120000);
+		setTimeout(gaIsActive, 150000);
+
+		function gaIsActive() {
+			if (!document.hidden) ga('send', 'event', { eventAction: 'TimeOnPage' });
+		}
+	</script>
+
+
+
+</body></html>
